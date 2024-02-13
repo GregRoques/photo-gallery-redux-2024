@@ -1,0 +1,77 @@
+.box {
+  width: 200px;
+  height: 200px;
+  border: 5px #4d95b4 solid;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: 0.5s;
+  overflow: auto;
+}
+
+.box IMG {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.box:hover {
+  transform: scale(0.95);
+  transition: 1s;
+}
+
+.centerText {
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.errorText {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.fadeIn {
+  margin-top: 4rem;
+  margin-bottom: 9rem;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.galleryInitialImgTransition {
+  transition: opacity 0.5s;
+}
+.galleryInitialImgVisible {
+  opacity: 1;
+}
+.galleryInitialImgHidden {
+  opacity: 0;
+}
+
+.loader {
+  width: 50px;
+}
+
+.photoHeader {
+  font-family: sans-serif;
+  text-align: center;
+  font-style: oblique;
+  font-weight: bolder;
+  color: #4c61b2;
+  font-size: 4rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 449px) {
+  .photoHeader {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,78 @@
+.closePhotoModal {
+  position: relative;
+  margin: 0;
+  left: 4%;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.imageGalleryButtons {
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  user-select: none;
+  padding: 10px;
+}
+
+.imageGalleryButtonsHidden {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  color: transparent;
+  font-size: 2rem;
+  font-weight: bold;
+  user-select: none;
+  padding: 10px;
+}
+
+.photoContent {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
+  height: 100%;
+}
+
+.photoModal {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  margin: auto;
+  animation-name: up;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes up {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.sliderContainer {
+  width: 100%;
+  height: 95%;
+}
+
+.sliderContainer IMG {
+  width: inherit;
+  height: inherit;
+  object-fit: contain;
+}

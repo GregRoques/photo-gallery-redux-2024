@@ -1,0 +1,74 @@
+.fadeIn {
+  margin-top: 4rem;
+  margin-bottom: 9rem;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.photoBox {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.photoBox IMG {
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+  object-position: center;
+}
+
+.photoGrid {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 1rem;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.photoHeader2 {
+  font-family: sans-serif;
+  text-align: center;
+  font-style: oblique;
+  font-weight: bolder;
+  color: #4c61b2;
+  font-size: 2.25rem;
+  padding-bottom: 25px;
+}
+
+// ================================== Media Queries
+
+@media screen and (min-width: 460px) {
+  .photoGalleryContainer {
+    margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .photoGrid {
+    grid-template-columns: repeat(auto-fill, 12rem);
+  }
+}
+
+@media screen and (max-width: 449px) {
+  .photoHeader {
+    font-size: 3rem;
+  }
+}

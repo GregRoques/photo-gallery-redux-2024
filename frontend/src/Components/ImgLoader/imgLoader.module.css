@@ -1,0 +1,9 @@
+.imgLoaderTransition {
+  transition: opacity 0.5s;
+}
+.imgLoaderVisible {
+  opacity: 1;
+}
+.imgLoaderHidden {
+  opacity: 0;
+}
