@@ -1,5 +1,5 @@
-============================================  htcAccess file
-***NOTE 1:*** Include in build folder, OR folder directory used in .conf file
+============================================  .htaccess
+***NOTE:*** Include in build folder, OR folder directory used in .conf file
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
@@ -10,14 +10,19 @@
     RewriteRule . /index.html [L]
 </IfModule>
 
+========================================== robots.txt
+***NOTE:*** Include in build folder, OR folder directory used in .conf file
+
+User-agent: *
+Disallow: /
+
 ========================================== config
 
 ================= HTTP
 
 <VirtualHost *:80>
   DocumentRoot /var/www/[PATH_TO_FOLDER_WITH_BUILD_FILE]
-    ServerName gregroques.com
-    ServerAlias www.gregroques.com
+    ServerName photos.gregroques.com
     <Directory "/var/www/[PATH_TO_FOLDER_WITH_BUILD_FILE]">
         allow from all
         AllowOverride All
@@ -28,8 +33,7 @@
 
 ***NOTE:*** Certbot will add rewrite rules. Will look like below:
     RewriteEngine on
-    RewriteCond %{SERVER_NAME} =www.gregroques.com [OR]
-    RewriteCond %{SERVER_NAME} =gregroques.com
+    RewriteCond %{SERVER_NAME} =photos.gregroques.com
     RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 
 ================= HTTPS
@@ -41,8 +45,7 @@
 
 <VirtualHost *:443>
   DocumentRoot /var/www/[PATH_TO_FOLDER_WITH_BUILD_FILE]
-    ServerName gregroques.com
-    ServerAlias www.gregroques.com
+    ServerName photos.gregroques.com
     <Directory "/var/www/[PATH_TO_FOLDER_WITH_BUILD_FILE]">
         allow from all
         AllowOverride All
